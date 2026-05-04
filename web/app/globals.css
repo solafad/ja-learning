@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/* ── Theme tokens ─────────────────────────────────────────── */
+
+[data-theme="light"] {
+  --background:    #ffffff;
+  --foreground:    #171717;
+  --surface:       #f9fafb;
+  --surface-hover: #f3f4f6;
+  --border:        #e5e7eb;
+  --muted:         #6b7280;
+  --accent:        #2563eb;
+  --accent-fg:     #ffffff;
+  --code-bg:       #f3f4f6;
+  --table-stripe:  #f9fafb;
+}
+
+[data-theme="dark"] {
+  --background:    #0f0f0f;
+  --foreground:    #ededed;
+  --surface:       #1a1a1a;
+  --surface-hover: #262626;
+  --border:        #2d2d2d;
+  --muted:         #9ca3af;
+  --accent:        #3b82f6;
+  --accent-fg:     #ffffff;
+  --code-bg:       #1f2937;
+  --table-stripe:  #1a1a1a;
+}
+
+[data-theme="sakura"] {
+  --background:    #fff5f7;
+  --foreground:    #3b0a1f;
+  --surface:       #fce7f3;
+  --surface-hover: #fbcfe8;
+  --border:        #f9a8d4;
+  --muted:         #9d174d;
+  --accent:        #db2777;
+  --accent-fg:     #ffffff;
+  --code-bg:       #fce7f3;
+  --table-stripe:  #fdf2f8;
+}
+
+[data-theme="midnight"] {
+  --background:    #0f172a;
+  --foreground:    #e2e8f0;
+  --surface:       #1e293b;
+  --surface-hover: #273549;
+  --border:        #334155;
+  --muted:         #94a3b8;
+  --accent:        #818cf8;
+  --accent-fg:     #0f172a;
+  --code-bg:       #1e293b;
+  --table-stripe:  #172033;
+}
+
+[data-theme="forest"] {
+  --background:    #0d1f0d;
+  --foreground:    #d1fae5;
+  --surface:       #14291a;
+  --surface-hover: #1a3322;
+  --border:        #2d4a35;
+  --muted:         #6ee7b7;
+  --accent:        #34d399;
+  --accent-fg:     #0d1f0d;
+  --code-bg:       #14291a;
+  --table-stripe:  #101d12;
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* ── Prose (markdown) ─────────────────────────────────────── */
+
+.prose h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem; }
+.prose h2 {
+  font-size: 1.2rem; font-weight: 600;
+  margin-top: 2rem; margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border); padding-bottom: 0.4rem;
+}
+.prose p  { margin-bottom: 0.9rem; line-height: 1.75; }
+.prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 0.9rem; }
+.prose li { margin-bottom: 0.35rem; line-height: 1.7; }
+.prose strong { font-weight: 600; }
+.prose em { font-style: italic; }
+.prose code {
+  font-family: var(--font-mono), monospace;
+  background: var(--code-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+.prose hr { border-color: var(--border); margin: 1.5rem 0; }
+
+.prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; font-size: 0.95rem; }
+.prose th {
+  background: var(--surface); text-align: left;
+  padding: 0.55rem 0.85rem; font-weight: 600;
+  border: 1px solid var(--border);
+}
+.prose td { padding: 0.5rem 0.85rem; border: 1px solid var(--border); }
+.prose tr:nth-child(even) td { background: var(--table-stripe); }
