@@ -24,6 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 🇯🇵 ja-learning
               </Link>
               <span className="text-xs text-[var(--muted)] font-mono">Intermediate B1 · Busuu</span>
+              <Link href="/plan" className="ml-2 text-xs px-2.5 py-1 rounded-full border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--muted)] transition-colors">
+                72-hr plan
+              </Link>
               <ThemeSwitcher />
             </div>
           </header>
