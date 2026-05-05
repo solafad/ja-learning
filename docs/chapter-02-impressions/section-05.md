@@ -1,4 +1,4 @@
-# Developing fluency: Practise using onomatopoeia
+# Developing fluency
 
 ## 1. Vocabulary List
 

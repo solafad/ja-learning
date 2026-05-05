@@ -1,4 +1,4 @@
-# Onomatopoeia for feelings and actions
+# Learning onomatopoeia
 
 ## 1. Vocabulary List
 

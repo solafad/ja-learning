@@ -1,4 +1,4 @@
-# Kanji for emotions
+# Kanji: 幸 悲 恥 怒 泣
 
 > Kanji focus: 幸 · 悲 · 恥 · 怒 · 泣
 

@@ -1,4 +1,4 @@
-# Developing fluency: ながら in practice
+# Developing fluency
 
 ## 1. Vocabulary List
 

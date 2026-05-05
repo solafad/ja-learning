@@ -1,4 +1,4 @@
-# Describing Inventions in the Passive
+# Describing inventions in the passive
 
 ## 1. Vocabulary List
 

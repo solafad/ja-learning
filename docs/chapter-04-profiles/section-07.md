@@ -1,4 +1,4 @@
-# Listening to a Dialogue About a Journey
+# Listening to a dialogue about a journey
 
 ## 1. Vocabulary List
 

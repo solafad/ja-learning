@@ -1,4 +1,4 @@
-# Chapter 2 Checkpoint
+# Checkpoint
 
 ## 1. Vocabulary List
 

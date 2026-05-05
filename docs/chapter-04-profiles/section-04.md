@@ -1,4 +1,4 @@
-# Creating an Online Profile
+# Creating an online profile
 
 ## 1. Vocabulary List
 

@@ -1,4 +1,4 @@
-# Chapter 3 Checkpoint
+# Checkpoint
 
 ## 1. Vocabulary Reviewed
 

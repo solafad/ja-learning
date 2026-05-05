@@ -1,4 +1,4 @@
-# 話を読もう — The Marathon
+# Reading about a marathon
 
 ## 1. Vocabulary List
 

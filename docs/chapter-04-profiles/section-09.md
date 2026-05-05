@@ -1,4 +1,4 @@
-# Talking Casually: The Passive
+# Talking casually: the passive
 
 ## 1. Vocabulary List
 

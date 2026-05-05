@@ -1,4 +1,4 @@
-# Describing impressions about others
+# Describing impressions
 
 ## 1. Vocabulary List
 

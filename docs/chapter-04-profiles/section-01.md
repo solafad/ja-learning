@@ -1,4 +1,4 @@
-# Using the Passive
+# Using the passive
 
 ## 1. Vocabulary List
 
