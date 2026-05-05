@@ -67,6 +67,19 @@
   --table-stripe:  #101d12;
 }
 
+[data-theme="washi"] {
+  --background:    #f0e4d2;
+  --foreground:    #3b2416;
+  --surface:       #e8d5c4;
+  --surface-hover: #ddbfae;
+  --border:        #caabb4;
+  --muted:         #8a6652;
+  --accent:        #c8977b;
+  --accent-fg:     #3b2416;
+  --code-bg:       #deddbb;
+  --table-stripe:  #ead8ca;
+}
+
 /* ── Base ─────────────────────────────────────────────────── */
 
 @theme inline {

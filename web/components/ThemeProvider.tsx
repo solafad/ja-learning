@@ -8,6 +8,7 @@ export const themes = [
   { id: "sakura",   label: "Sakura",   swatch: "#fce7f3" },
   { id: "midnight", label: "Midnight", swatch: "#0f172a" },
   { id: "forest",   label: "Forest",   swatch: "#0f1f0f" },
+  { id: "washi",    label: "Washi",    swatch: "#c8977b" },
 ] as const;
 
 export type ThemeId = (typeof themes)[number]["id"];
