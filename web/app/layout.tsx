@@ -19,12 +19,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
         <ThemeProvider>
           <header className="border-b border-[var(--border)] sticky top-0 z-10 bg-[var(--background)] backdrop-blur">
-            <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-3">
-              <Link href="/" className="font-bold text-lg tracking-tight hover:opacity-70 transition-opacity">
+            <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-2">
+              <Link href="/" className="font-bold text-lg tracking-tight hover:opacity-70 transition-opacity shrink-0">
                 🇯🇵 ja-learning
               </Link>
-              <span className="text-xs text-[var(--muted)] font-mono">Intermediate B1 · Busuu</span>
-              <Link href="/plan" className="ml-2 text-xs px-2.5 py-1 rounded-full border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--muted)] transition-colors">
+              <span className="text-xs text-[var(--muted)] font-mono hidden sm:inline shrink-0">Intermediate B1 · Busuu</span>
+              <Link href="/plan" className="text-xs px-2.5 py-1 rounded-full border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--muted)] transition-colors shrink-0">
                 72-hr plan
               </Link>
               <ThemeSwitcher />

@@ -23,7 +23,7 @@ export default async function ChapterLayout({
   }));
 
   return (
-    <div className="flex gap-8 items-start">
+    <div className="flex flex-col md:flex-row md:gap-8 md:items-start">
       <SectionSidebar
         chapterSlug={chapterSlug}
         chapterTitle={chapter.title}

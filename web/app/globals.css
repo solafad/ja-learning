@@ -116,7 +116,7 @@ body {
 }
 .prose hr { border-color: var(--border); margin: 1.5rem 0; }
 
-.prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; font-size: 0.95rem; }
+.prose table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-collapse: collapse; margin-bottom: 1.25rem; font-size: 0.95rem; }
 .prose th {
   background: var(--surface); text-align: left;
   padding: 0.55rem 0.85rem; font-weight: 600;

@@ -75,13 +75,13 @@ export default function PlanPage() {
       </div>
 
       {/* Target */}
-      <div className="flex items-center gap-3 border border-[var(--accent)] rounded-xl px-5 py-4 mb-8 bg-[var(--surface)]">
-        <span className="text-2xl">🎯</span>
-        <div>
+      <div className="flex flex-wrap items-center gap-3 border border-[var(--accent)] rounded-xl px-5 py-4 mb-8 bg-[var(--surface)]">
+        <span className="text-2xl shrink-0">🎯</span>
+        <div className="flex-1 min-w-0">
           <p className="text-xs text-[var(--muted)] uppercase tracking-wider mb-0.5">Target finish date</p>
           <p className="font-semibold text-[var(--foreground)]">Friday, 8 May 2026</p>
         </div>
-        <div className="ml-auto text-right">
+        <div className="sm:ml-auto text-right">
           <p className="text-xs text-[var(--muted)] uppercase tracking-wider mb-0.5">Daily lessons</p>
           <p className="font-semibold text-[var(--foreground)]">~55–60</p>
         </div>

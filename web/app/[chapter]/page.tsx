@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getChapters, getChapter } from "@/lib/docs";
+import SectionSearch from "@/components/SectionSearch";
 
 export async function generateStaticParams() {
   return getChapters().map((c) => ({ chapter: c.slug }));
@@ -15,6 +16,8 @@ export default async function ChapterPage({
   const chapter = getChapter(chapterSlug);
   if (!chapter) notFound();
 
+  const sections = chapter.sections.map((s) => ({ slug: s.slug, title: s.title, content: s.content }));
+
   return (
     <div>
       <nav className="text-sm text-[var(--muted)] mb-6 flex items-center gap-1.5">
@@ -28,24 +31,7 @@ export default async function ChapterPage({
         {chapter.sections.length} section{chapter.sections.length !== 1 ? "s" : ""}
       </p>
 
-      <div className="grid gap-3">
-        {chapter.sections.map((section, i) => (
-          <Link
-            key={section.slug}
-            href={`/${chapterSlug}/${section.slug}`}
-            className="flex items-center gap-4 border border-[var(--border)] rounded-xl px-5 py-4 hover:border-[var(--muted)] hover:bg-[var(--surface)] transition-all group"
-          >
-            <span className="text-2xl font-bold text-[var(--border)] group-hover:text-[var(--muted)] w-8 shrink-0 transition-colors">
-              {i + 1}
-            </span>
-            <div>
-              <p className="font-medium group-hover:underline">{section.title}</p>
-              <p className="text-xs text-[var(--muted)] mt-0.5">{section.slug}</p>
-            </div>
-            <span className="ml-auto text-[var(--muted)] opacity-50 group-hover:translate-x-0.5 transition-transform">→</span>
-          </Link>
-        ))}
-      </div>
+      <SectionSearch chapterSlug={chapterSlug} sections={sections} />
     </div>
   );
 }
