@@ -1,75 +1,36 @@
-# ja-learning
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A personal structured note repository for studying Japanese on [Busuu](https://www.busuu.com), currently progressing through the **Intermediate B1** course.
+## Getting Started
 
-Each lesson is captured as a clean, scannable markdown file covering vocabulary, grammar patterns, learning context, and progress tracking.
+First, run the development server:
 
----
-
-## Repository Structure
-
-```
-ja-learning/
-├── docs/
-│   └── chapter-01-emotions/
-│       ├── section-01.md   # Emotions: うれしい, かなしい, しあわせ
-│       ├── section-02.md   # Emotions: はずかしい, さびしい, negative adjectives
-│       ├── section-03.md   # Emotions: くやしい, おこる, past tense
-│       └── section-04.md   # Emotions: 幸せ, 今, pronoun 僕
-├── CLAUDE.md             # AI tool instructions and chapter generator format
-└── README.md
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Course Progress
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-| Level          | Course                          | Chapter        | Completion |
-|----------------|---------------------------------|----------------|------------|
-| Intermediate B1 | Complete Japanese — Busuu      | Chapter 1: Emotions | ~28%  |
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
+## Learn More
 
-## Chapter Format
+To learn more about Next.js, take a look at the following resources:
 
-Every chapter note follows a consistent four-section structure:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### 1. Vocabulary List
-A table of new words with Japanese, romaji, and English translation. Kanji entries include furigana in parentheses.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-### 2. Grammar & Sentences
-The core grammar rule of the lesson, broken down into:
-- Pattern structure with inline code formatting
-- Key phrases and example sentences with romaji and English translation
+## Deploy on Vercel
 
-### 3. Learning Context
-Nuance notes, situational context, and performance highlights — the "why" behind the vocabulary and grammar.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-### 4. Progress Tracker
-A snapshot of course completion and latest lesson score at the time of the note.
-
----
-
-## Chapters
-
-| File | Topic | Key Grammar | Score |
-|------|-------|-------------|-------|
-| [section-01.md](docs/chapter-01-emotions/section-01.md) | Expressing emotions & reasons | から (because) + なぜなら | — |
-| [section-02.md](docs/chapter-01-emotions/section-02.md) | Negative emotions & denial | i-adjective negative: 〜くないです | 100% |
-| [section-03.md](docs/chapter-01-emotions/section-03.md) | Frustration & anger | i-adjective past: 〜かったです | 100% |
-| [section-04.md](docs/chapter-01-emotions/section-04.md) | Current state & pronouns | 今 + emotion + です | 100% |
-
----
-
-## AI Tool Integration
-
-This repo includes a [CLAUDE.md](CLAUDE.md) that instructs AI tools (Claude Code, Cursor, Copilot Workspace, etc.) to automatically format new lesson notes into the standard chapter structure when given raw content.
-
-To add a new chapter, paste your raw Busuu lesson notes and ask:
-
-```
-generate for chaps N
-[raw lesson content]
-```
-
-The AI will create `docs/b1-chapterNN.md` with the correct format applied.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
