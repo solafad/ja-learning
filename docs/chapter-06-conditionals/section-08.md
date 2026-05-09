@@ -1,4 +1,4 @@
-# Learning Summary
+# Describing hopes with the ば form
 
 ## 1. Vocabulary List
 

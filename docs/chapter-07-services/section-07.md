@@ -1,4 +1,4 @@
-# Learning Summary
+# Checkpoint
 
 ## 1. Vocabulary List
 

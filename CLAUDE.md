@@ -7,7 +7,7 @@ This repository stores structured Japanese learning notes from the Busuu Interme
 When given raw lesson content and asked to generate a section, save it to `docs/chapter-NN-[topic]/section-NN.md` (zero-padded, e.g. `docs/chapter-01-emotions/section-05.md`) using this structure:
 
 ```markdown
-# Learning Summary
+# [Lesson Title from chapters-lessons.md]
 
 ## 1. Vocabulary List
 
