@@ -23,13 +23,17 @@ function formatTitle(slug: string): string {
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
+let _chaptersCache: Chapter[] | null = null;
+
 export function getChapters(): Chapter[] {
+  if (_chaptersCache) return _chaptersCache;
+
   const entries = fs.readdirSync(DOCS_DIR, { withFileTypes: true });
   const dirs = entries
     .filter((e) => e.isDirectory())
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  return dirs.map((dir) => {
+  _chaptersCache = dirs.map((dir) => {
     const chapterPath = path.join(DOCS_DIR, dir.name);
     const files = fs
       .readdirSync(chapterPath)
@@ -50,6 +54,8 @@ export function getChapters(): Chapter[] {
       sections,
     };
   });
+
+  return _chaptersCache;
 }
 
 export function getChapter(chapterSlug: string): Chapter | undefined {
