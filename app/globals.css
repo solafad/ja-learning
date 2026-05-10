@@ -80,6 +80,16 @@
   --table-stripe:  #ead8ca;
 }
 
+/* ── Utilities ────────────────────────────────────────────── */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* ── Base ─────────────────────────────────────────────────── */
 
 @theme inline {
