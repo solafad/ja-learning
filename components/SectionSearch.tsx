@@ -6,7 +6,6 @@ import Link from "next/link";
 interface Section {
   slug: string;
   title: string;
-  content: string;
 }
 
 interface Props {
@@ -23,27 +22,13 @@ function highlight(text: string, query: string): string {
   );
 }
 
-function getSnippet(content: string, query: string, radius = 80): string {
-  const plain = content.replace(/[#*`|_~]/g, "").replace(/\n+/g, " ").trim();
-  const idx = plain.toLowerCase().indexOf(query.toLowerCase());
-  if (idx === -1) return "";
-  const start = Math.max(0, idx - radius);
-  const end = Math.min(plain.length, idx + query.length + radius);
-  return (start > 0 ? "…" : "") + plain.slice(start, end) + (end < plain.length ? "…" : "");
-}
-
 export default function SectionSearch({ chapterSlug, sections }: Props) {
   const [query, setQuery] = useState("");
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return sections.map((s) => ({ ...s, snippet: "" }));
-    return sections
-      .filter((s) => s.title.toLowerCase().includes(q) || s.content.toLowerCase().includes(q))
-      .map((s) => ({
-        ...s,
-        snippet: s.title.toLowerCase().includes(q) ? "" : getSnippet(s.content, query.trim()),
-      }));
+    if (!q) return sections;
+    return sections.filter((s) => s.title.toLowerCase().includes(q));
   }, [query, sections]);
 
   return (
@@ -95,14 +80,7 @@ export default function SectionSearch({ chapterSlug, sections }: Props) {
                   className="font-medium group-hover:underline"
                   dangerouslySetInnerHTML={{ __html: highlight(section.title, query.trim()) }}
                 />
-                {section.snippet ? (
-                  <p
-                    className="text-xs text-[var(--muted)] mt-1 leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: highlight(section.snippet, query.trim()) }}
-                  />
-                ) : (
-                  <p className="text-xs text-[var(--muted)] mt-0.5">{section.slug}</p>
-                )}
+                <p className="text-xs text-[var(--muted)] mt-0.5">{section.slug}</p>
               </div>
               <span className="ml-auto text-[var(--muted)] opacity-50 group-hover:translate-x-0.5 transition-transform pt-1 shrink-0">→</span>
             </Link>

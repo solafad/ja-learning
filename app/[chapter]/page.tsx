@@ -16,7 +16,7 @@ export default async function ChapterPage({
   const chapter = getChapter(chapterSlug);
   if (!chapter) notFound();
 
-  const sections = chapter.sections.map((s) => ({ slug: s.slug, title: s.title, content: s.content }));
+  const sections = chapter.sections.map((s) => ({ slug: s.slug, title: s.title }));
 
   return (
     <div>

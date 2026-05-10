@@ -97,7 +97,11 @@ function parseVocabTable(content: string): Array<{ japanese: string; romaji: str
   return items;
 }
 
+let _quizItemsCache: QuizItem[] | null = null;
+
 export function getQuizItems(): QuizItem[] {
+  if (_quizItemsCache) return _quizItemsCache;
+
   const items: QuizItem[] = [];
 
   const dirs = fs
@@ -137,12 +141,13 @@ export function getQuizItems(): QuizItem[] {
 
   // deduplicate by japanese+english
   const seen = new Set<string>();
-  return items.filter((item) => {
+  _quizItemsCache = items.filter((item) => {
     const key = `${item.japanese}|${item.english}`;
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
   });
+  return _quizItemsCache;
 }
 
 export function getChapterSlugs(): string[] {
