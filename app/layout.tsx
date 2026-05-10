@@ -27,6 +27,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/plan" className="text-xs px-2.5 py-1 rounded-full border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--muted)] transition-colors shrink-0">
                 72-hr plan
               </Link>
+              <Link href="/quiz" className="text-xs px-2.5 py-1 rounded-full border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--muted)] transition-colors shrink-0">
+                🃏 Quiz
+              </Link>
               <ThemeSwitcher />
             </div>
           </header>
