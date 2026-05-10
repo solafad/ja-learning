@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import ThemeProvider from "@/components/ThemeProvider";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
+import SoundsProvider from "@/components/SoundsProvider";
+import MiniPlayer from "@/components/MiniPlayer";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -18,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja" data-theme="light" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
         <ThemeProvider>
+          <SoundsProvider>
           <header className="border-b border-[var(--border)] sticky top-0 z-10 bg-[var(--background)] backdrop-blur">
             <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-3">
               {/* Left: brand */}
@@ -50,6 +53,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <footer className="border-t border-[var(--border)] text-center text-xs text-[var(--muted)] py-4">
             Japanese Intermediate B1 — Busuu
           </footer>
+          <MiniPlayer />
+          </SoundsProvider>
         </ThemeProvider>
       </body>
     </html>
